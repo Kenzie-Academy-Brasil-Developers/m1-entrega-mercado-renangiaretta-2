@@ -1,201 +1,136 @@
 const products = [
-  {
-    title: "Uva Crimson",
-    price: 8.99,
-    category: "Frutas",
-    image: undefined,
-    imageDescription: "Uva boa",
-  },
-  {
-    title: "Banana",
-    price: 5.69,
-    category: "Frutas",
-    image: "./img/products/product_2.svg",
-    imageDescription: "Um monte de bananas",
-  },
-  {
-    title: "Mamão",
-    price: 4.99,
-    category: "Frutas",
-    image: "./img/products/product_3.svg",
-    imageDescription: "Mamão papaia",
-  },
-  {
-    title: "Maçã",
-    price: 9.20,
-    category: "Frutas",
-    image: "./img/products/product_4.svg",
-    imageDescription: "Maça verde voadora",
-  },
-  {
-    title: "Refrigerante",
-    price: 8.99,
-    category: "Bebidas",
-    image: undefined,
-    imageDescription: "Refrigerante",
-  },
-  {
-    title: "Vinho",
-    price: 8.99,
-    category: "Bebidas",
-    image: "./img/products/product_6.svg",
-    imageDescription: "Vinho e fogo",
-  },
-  {
-    title: "Água Tônica",
-    price: 8.99,
-    category: "Bebidas",
-    image: undefined,
-    imageDescription: "Água tônica",
-  },
-  {
-    title: "Água de coco",
-    price: 8.99,
-    category: "Bebidas",
-    image: "./img/products/product_8.svg",
-    imageDescription: "Coco da Bahia",
-  },
-
-  {
-    title: "Sabonete",
-    price: 8.99,
-    category: "Higiene",
-    image: "./img/products/product_9.svg",
-    imageDescription: "Sabonete com laço gourmet",
-  },
-
-  {
-    title: "Detergente",
-    price: 8.99,
-    category: "Higiene",
-    image: "./img/products/product_10.svg",
-    imageDescription: "Detergente vermelhão",
-  },
-
-  {
-    title: "Limpa superfícies",
-    price: 8.99,
-    category: "Higiene",
-    image: "./img/products/product_11.svg",
-    imageDescription: "Limpa superfícies",
-  },
-
-  {
-    title: "Lustra Móveis",
-    price: 8.99,
-    category: "Higiene",
-    image: undefined,
-    imageDescription: "Lustra móveis",
-  },
-];
-
-
-function separaSecaoFrutas (){
-  let ul = document.createElement('ul')
-  let secaoFrutas = document.querySelector('.products-content')
-  for(let i=0; i<products.length; i++){
-    if(products[i].category == 'Frutas'){
-    let produto = document.createElement('li')
-    let title = document.createElement('p')
-    let price = document.createElement('p')
-    let category = document.createElement('p')
-    let image = document.createElement('img')
-    let imageDescription = document.createElement('p')
-    
-    if(products[i].image == undefined){
-      image.src = "./img/products/no-img.svg"
-    }
-    else{
-      image.src = products[i].image
-    }
+    {
+      title: "Uva Crimson",
+      price: 8.99,
+      category: "Frutas",
+      image: undefined,
+      imageDescription: "Imagem indisponível",
+    },
+    {
+      title: "Banana",
+      price: 5.69,
+      category: "Frutas",
+      image: "./img/products/product_2.svg",
+      imageDescription: "Bananas maduras",
+    },
+    {
+      title: "Mamão",
+      price: 4.99,
+      category: "Frutas",
+      image: "./img/products/product_3.svg",
+      imageDescription: "Mamão verde",
+    },
+    {
+      title: "Maçã",
+      price: 9.20,
+      category: "Frutas",
+      image: "./img/products/product_4.svg",
+      imageDescription: "Maça verde",
+    },
+    {
+      title: "Refrigerante",
+      price: 8.99,
+      category: "Bebidas",
+      image: undefined,
+      imageDescription: "Refrigerante",
+    },
+    {
+      title: "Vinho",
+      price: 8.99,
+      category: "Bebidas",
+      image: "./img/products/product_6.svg",
+      imageDescription: "Garrafa de vinho",
+    },
+    {
+      title: "Água Tônica",
+      price: 8.99,
+      category: "Bebidas",
+      image: undefined,
+      imageDescription: "Água tônica",
+    },
+    {
+      title: "Água de coco",
+      price: 8.99,
+      category: "Bebidas",
+      image: "./img/products/product_8.svg",
+      imageDescription: "Coco da Bahia",
+    },
   
-    title.innerText = products[i].title
-    price.innerText = products[i].price
-    category.innerText = products[i].category
-    imageDescription.innerText = products[i].imageDescription
-    produto.classList.add('product')
-    title.classList.add('product-title')
-    price.classList.add('product-price')
-    category.classList.add('product-category')
-    image.classList.add('product-img')
-    secaoFrutas.classList.add('product-main')
-    produto.append(image, title, category, price, imageDescription)
-    ul.append(produto)
-    secaoFrutas.appendChild(ul)
-  }
-  }
-}
-separaSecaoFrutas()
+    {
+      title: "Sabonete",
+      price: 8.99,
+      category: "Higiene",
+      image: "./img/products/product_9.svg",
+      imageDescription: "Sabonete em barra",
+    },
+  
+    {
+      title: "Detergente",
+      price: 8.99,
+      category: "Higiene",
+      image: "./img/products/product_10.svg",
+      imageDescription: "Detergente",
+    },
+  
+    {
+      title: "Limpa superfícies",
+      price: 8.99,
+      category: "Higiene",
+      image: "./img/products/product_11.svg",
+      imageDescription: "Limpa superfícies",
+    },
+  
+    {
+      title: "Lustra Móveis",
+      price: 8.99,
+      category: "Higiene",
+      image: undefined,
+      imageDescription: "Lustra móveis",
+    },
+  ];
+  
+function separaSecao(secao){
 
+  for(let i = 0; i < secao.length; i++){
+    let main = 0;
+      if(secao[i].category == 'Frutas'){
+        main = document.querySelector('.fruits ul')
+      }
+      if(secao[i].category == 'Bebidas'){
+        main = document.querySelector('.drinks ul')
+      }
+      if(secao[i].category == 'Higiene'){
+        main = document.querySelector('.hygiene ul')
+      }
+      const productCard = document.createElement('li')
+      productCard.className = 'product';
 
-function separaSecaoBebidas (){
-  let ul = document.createElement('ul')
-  let secaoBebidas = document.querySelectorAll('.products-content')[1]
-  for(let i = 0; i<products.length; i++){
-    if(products[i].category == 'Bebidas'){
-    let produto = document.createElement('li')
-    let title = document.createElement('p')
-    let price = document.createElement('p')
-    let category = document.createElement('p')
-    let image = document.createElement('img')
-    let imageDescription = document.createElement('p')
-
-    if(products[i].image == undefined){
-      image.src = "./img/products/no-img.svg"
-    }
-    else{
-      image.src = products[i].image
-    }
-      title.innerText = products[i].title
-      price.innerText = products[i].price
-      category.innerText = products[i].category
-      imageDescription.innerText = products[i].imageDescription
-      produto.classList.add('product')
-      title.classList.add('product-title')
-      price.classList.add('product-price')
-      category.classList.add('product-category')
-      image.classList.add('product-img')
-      secaoBebidas.classList.add('product-main')
-      produto.append(image, title, category, price, imageDescription)
-      ul.append(produto)
-      secaoBebidas.appendChild(ul)
-    }
-  }
-}
-separaSecaoBebidas()
-
-function separaSecaoHigiene (){
-  let ul = document.createElement('ul')
-  let secaoHigiene = document.querySelectorAll('.products-content')[2]
-  for(let i = 0; i<products.length; i++){
-    if(products[i].category == 'Higiene'){
-    let produto = document.createElement('li')
-    let title = document.createElement('p')
-    let price = document.createElement('p')
-    let category = document.createElement('p')
-    let image = document.createElement('img')
-    let imageDescription = document.createElement('p')
-
-    if(products[i].image == undefined){
-      image.src = "./img/products/no-img.svg"
-    }
-    else{
-      image.src = products[i].image
-    }
-      title.innerText = products[i].title
-      price.innerText = products[i].price
-      category.innerText = products[i].category
-      imageDescription.innerText = products[i].imageDescription
-      produto.classList.add('product')
-      title.classList.add('product-title')
-      price.classList.add('product-price')
-      category.classList.add('product-category')
-      image.classList.add('product-img')
-      secaoHigiene.classList.add('product-main')
-      produto.append(image, title, category, price, imageDescription)
-      ul.append(produto)
-      secaoHigiene.appendChild(ul)
+      const imagem = document.createElement('img')
+      imagem.className = 'product-img';
+      if(secao[i].image == undefined){
+        imagem.src = './img/products/no-img.svg'
+      }
+      else {
+        imagem.src = secao[i].image
+      }
+      const produtoPadrao = document.createElement('main')
+      produtoPadrao.className = 'product-main'
+      const title = document.createElement('h1')
+      title.className = 'product-title'
+      title.textContent = secao[i].title
+      const category = document.createElement('h5')
+      category.className = 'product-category'
+      category.textContent = secao[i].category
+      const price = document.createElement('strong')
+      price.className = 'product-price'
+      price.textContent = secao[i].price
+      imagem.alt = secao[i].imageDescription
+      produtoPadrao.appendChild(title)
+      produtoPadrao.appendChild(category)
+      produtoPadrao.appendChild(price)
+      productCard.appendChild(imagem)
+      productCard.appendChild(produtoPadrao)
+      main.appendChild(productCard)
     }
   }
-}
-separaSecaoHigiene()
+  separaSecao(products)
